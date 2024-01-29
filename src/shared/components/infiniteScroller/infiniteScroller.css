@@ -1,0 +1,24 @@
+.loadmore-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 60px 0;
+  }
+  
+  .loadmore-wrap a {
+    font-style: normal;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-gray);
+    padding: 16px 36px;
+    background-color: var(--bg-light);
+    border-radius: 6px;
+  }
+  

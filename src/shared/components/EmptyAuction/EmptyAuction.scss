@@ -1,0 +1,15 @@
+@import "../../../assets/css/mixins";
+
+.empty-auction {
+  p {
+    @include fontStyle(
+      $size: 18px,
+      $lineHeight: 1.8,
+      $color: var(--black),
+      $weight: 400
+    );
+  }
+  &-inner {
+    width: 65%;
+  }
+}

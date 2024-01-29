@@ -1,0 +1,31 @@
+@import "../../../../assets/css/mixins";
+
+.gradient-footer {
+  background: var(--linear-gradient);
+  border-radius: 6px;
+  padding: clamp(6px, 1vw + 2px, 16px) clamp(12px, 1.35vw + 2px, 22px);
+  margin-top: clamp(12px, 1.5vw, 24px);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      @include medium(max-width) {
+        height: 8px;
+      }
+    }
+  }
+
+  &__text {
+    line-height: clamp(11px, 1.3vw + 3px, 21px);
+    font-size: clamp(11px, 1.3vw + 3px, 20px);
+    margin-bottom: 0 !important;
+    color: var(--white);
+  }
+  &__icon {
+    svg {
+      height: clamp(12px, 0.9vw, 16px);
+    }
+  }
+}

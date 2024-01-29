@@ -1,0 +1,232 @@
+#tv-btn {
+  text-transform: capitalize;
+  // padding-left: 24px;
+  // padding-right: 24px;
+  white-space: nowrap;
+  height: 42px;
+  border-radius: 4px;
+  background: var(--primary-btn-bg);
+  border: 1px solid transparent;
+  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    font-size: clamp(12px, 1vw + 5px, 17px);
+    font-family: var(--Roboto_Bold);
+    color: var(--primary-btn-text);
+    line-height: 13px;
+    text-transform: capitalize;
+  }
+  &.btn-block {
+    width: 100%;
+    // height: unset;
+  }
+  &.btn-block-no-height {
+    width: 100%;
+    height: unset;
+  }
+  &.btn-all-unset {
+    // padding-left: unset;
+    // padding-right: unset;
+    height: unset !important;
+    width: unset;
+  }
+  &.btn-md {
+    height: 40px;
+    width: 170px;
+  }
+  &.btn-wide {
+    max-width: 450px;
+    height: clamp(2.5rem, 2.1359rem + 1.5534vw, 4rem);
+    width: 100%;
+  }
+  &.btn-lg {
+    height: 48px;
+  }
+  &.btn-xl {
+    height: 60px;
+  }
+  &.btn-sm {
+    height: 30px;
+  }
+  &.tv-btn-dark {
+    svg {
+      path {
+        stroke: var(--white);
+      }
+    }
+  }
+  &.tv-btn-underlined {
+    border-color: var(--tv-btn-outlined);
+    background: transparent;
+    span {
+      text-decoration: underline;
+      color: var(--tv-btn-outlined);
+    }
+  }
+  &.tv-btn-default {
+    background: var(--tv-btn-default);
+    span {
+      color: var(--tv-btn-default-text);
+    }
+  }
+  &.tv-btn-outline-white {
+    background: transparent;
+    border-color: var(--white) !important;
+    span {
+      color: var(--white) !important;
+    }
+  }
+  &.tv-btn-rounded {
+    border-radius: 30px;
+  }
+  &.tv-btn-gradient {
+    background: var(--linear-gradient);
+    border: none;
+  }
+  &.tv-btn-green {
+    background: var(--neon-green);
+    border: none;
+  }
+  &.tv-btn-metamask {
+    background: var(--metamask-linear-gradient);
+    border: none;
+  }
+  &.tv-btn-dark-gray {
+    background: var(--label-color);
+    color: var(--black);
+  }
+
+  &.tv-btn-dark-gray-2 {
+    background: var(--border-color);
+    span {
+      color: var(--black);
+    }
+  }
+
+  &.tv-btn-light-blue {
+    background: rgba(var(--light-blue-badge), 0.1);
+    span {
+      color: rgba(var(--dark-primary-color), 1);
+    }
+  }
+  &.tv-btn-white {
+    background: var(--primary-white-btn);
+    border: 1px solid var(--border-color);
+    span {
+      color: var(--black);
+    }
+  }
+
+  &.tv-btn-light-purple {
+    background: rgba(var(--purple-badge), 0.1);
+    span {
+      color: rgba(var(--purple-badge), 1);
+    }
+  }
+
+  &.tv-btn-english {
+    background: var(--uncommon);
+    span {
+      color: var(--white);
+    }
+  }
+
+  &.tv-btn-sealed {
+    background: var(--regular-gray-text-color);
+    span {
+      color: var(--white);
+    }
+  }
+
+  &.tv-btn-dutch {
+    background: var(--special);
+    span {
+      color: var(--white);
+    }
+  }
+  &.icon-sm {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &.tv-we-btn {
+    span {
+      color: rgba(var(--light-blue-badge), 1);
+    }
+  }
+  &.tv-btn-outlined {
+    border-color: var(--tv-btn-outlined);
+    background: transparent;
+    span {
+      color: var(--tv-btn-outlined);
+    }
+  }
+
+  &.tv-btn-dark-blue {
+    background: var(--dark-text-color);
+    span {
+      color: var(--white);
+    }
+  }
+  &.tv-btn-dashed {
+    border-style: dashed;
+    border-color: var(--border-color);
+  }
+  &.tv-icon-btn {
+    height: 44px;
+    width: 44px;
+    padding: 14px;
+
+    span {
+      margin: 0;
+    }
+  }
+  img {
+    width: 24px;
+  }
+}
+html {
+  &[theme-mode="dark"] {
+    .tv-btn-default {
+      svg {
+        path {
+          stroke: #95a2b4;
+          &:last-child {
+            fill: #95a2b4;
+          }
+        }
+      }
+    }
+    .tv-btn-white {
+      svg {
+        path {
+          fill: var(--regular-gray-text-color);
+          stroke: var(--regular-gray-text-color);
+        }
+      }
+    }
+    .tv-btn-gradient {
+      span {
+        color: var(--white) !important;
+      }
+    }
+    .tv-btn-metamask {
+      span {
+        color: var(--white) !important;
+      }
+    }
+    .tv-btn-dashed {
+      border-color: var(--white) !important;
+
+      span {
+        color: var(--white) !important;
+      }
+    }
+  }
+}

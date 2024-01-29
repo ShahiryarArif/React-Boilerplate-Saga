@@ -1,0 +1,38 @@
+@import "../../../../assets/css/mixins";
+.reveal_modal {
+  width: fit-content !important;
+  position: relative;
+  max-width: none !important;
+
+  .modal-content {
+    background-color: transparent;
+    border: none;
+
+    .modal-body {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &__light {
+    z-index: -1;
+    position: absolute;
+  }
+
+  &-upper {
+    /* @include font-styles-heading3(white, 700); */
+    margin-bottom: 100px;
+  }
+
+  &-lower {
+    margin-top: 55px;
+    width: 60%;
+    text-align: center;
+    h3 {
+      /*  @include font-styles-heading3(var(--color-rarity-yellow), 300); */
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}

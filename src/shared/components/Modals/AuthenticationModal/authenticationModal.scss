@@ -1,0 +1,96 @@
+.tv-auth-modal-wrapper {
+  background-image: url(../../../../assets/images/login-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .modal-dialog {
+    // max-width: 600px;
+    max-width: clamp(28.125rem, 12.5rem + 18.8333vw, 37.5rem);
+  }
+  .modal-content {
+    padding: 0;
+  }
+  .modal-body {
+    all: unset;
+    padding: clamp(24px, 2.5vw + 12px, 60px);
+
+    #tv-btn {
+      span {
+        font-family: var(--Roboto_Medium) !important;
+      }
+    }
+  }
+  .modal-header {
+    border: none;
+  }
+}
+span.dummy-link-text {
+  color: rgba(var(--light-blue-badge), 1);
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+span.dummy-link-underline-text {
+  color: rgba(var(--light-blue-badge), 1);
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tv-password-toggle {
+  height: 24px;
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-gray);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tv-password-input-wrapper {
+  position: relative;
+}
+.tv-email-sent-wrapper {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  strong {
+    color: var(--black);
+  }
+}
+
+.auth-modal-back-btn {
+  border: none;
+  background-color: transparent;
+  &-text {
+    line-height: 20px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  svg {
+    transform: translateY(-2px);
+
+    path {
+      fill: var(--back-arrow-auth-modal);
+    }
+  }
+}
+.text-style {
+  color: black;
+}
+
+.form-select {
+  background-color: var(--input-bg-color) !important;
+}
+
+/* .form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  transform: scale(1) translateY(-14px) translateX(-2px);
+} */

@@ -1,0 +1,42 @@
+@import "../../../assets/css/mixins";
+
+.match-box {
+  background-color: var(--body-bg-gray);
+  border-radius: 6px;
+  padding: 25px 24px;
+  &-left {
+    .best-match {
+      @include fontStyle($size: 15px, $lineHeight: 18px, $color: var(--black));
+    }
+  }
+  &-price {
+    line-height: 23px;
+    font-weight: bold;
+  }
+  &-btn {
+    background-color: var(--white);
+    padding: 6px 10px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--dark-primary-color);
+    svg {
+      margin-left: 10px;
+      path {
+        fill: var(--dark-primary-color);
+      }
+    }
+
+    span {
+      @include fontStyle(
+        $size: 14px,
+        $lineHeight: 15px,
+        $family: var(--Roboto_Medium),
+        $color: var(--matchbox-btn)
+      );
+    }
+  }
+  &-underlined {
+    text-decoration: underline;
+    @include fontStyle($size: 20px, $lineHeight: 23px, $color: var(--black));
+  }
+}

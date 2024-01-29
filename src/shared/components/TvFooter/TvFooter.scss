@@ -1,0 +1,99 @@
+@import "../../../assets/css/mixins";
+
+.tv-footer {
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  padding-top: clamp(1.875rem, 1.1772rem + 2.9773vw, 4.75rem);
+  padding-bottom: clamp(1.875rem, 1.1772rem + 2.9773vw, 4.75rem);
+  background-color: var(--tv-footer-bg);
+  &-content {
+    &-top {
+      border-bottom: 1px solid var(--label-color);
+      h5 {
+        @include fontStyle(
+          $size: 20px,
+          $lineHeight: 32px,
+          $weight: 500,
+          $color: var(--black),
+          $family: var(--Roboto_Medium)
+        );
+      }
+      padding-bottom: clamp(1.25rem, 1.0983rem + 0.6472vw, 1.875rem);
+    }
+    &-bottom {
+      p {
+        @include fontStyle(
+          $size: 18px,
+          $lineHeight: 1.7,
+          $color: rgba(var(--black), 0.8)
+        );
+      }
+      &-list {
+        & > li:not(:last-child) {
+          margin-right: 14px;
+        }
+        a {
+          white-space: nowrap;
+          @include fontStyle(
+            $size: 18px,
+            $lineHeight: 32px,
+            $color: rgba(var(--black), 0.8)
+          );
+        }
+      }
+    }
+  }
+  &-quick-links {
+    &-list {
+      & > li:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+    &-link {
+      white-space: nowrap;
+      @include fontStyle(
+        $size: 18px,
+        $lineHeight: 32px,
+        $color: rgba(var(--black), 0.8)
+      );
+    }
+  }
+  &-copyrights {
+    @include fontStyle(
+      $size: 18px,
+      $lineHeight: 1.7,
+      $color: rgba(var(--black), 0.8)
+    );
+    margin-top: clamp(2.8125rem, 2.2512rem + 2.3948vw, 5.125rem);
+  }
+  &-bottom {
+    &-list {
+      & > li:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+    &-link {
+      white-space: nowrap;
+    }
+  }
+  &-btns {
+    &-text {
+      text-align: left;
+      white-space: nowrap;
+      color: var(--white);
+      font-weight: 500;
+      font-size: 14px;
+      small {
+        line-height: 14px;
+        white-space: nowrap;
+        font-weight: 300;
+        font-size: 11px;
+      }
+    }
+  }
+  #tv-btn {
+    background: var(--footer-buttons);
+    border-color: var(--tv-footer-btns-border);
+  }
+}

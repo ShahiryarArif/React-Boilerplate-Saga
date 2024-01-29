@@ -1,0 +1,24 @@
+#tv-badge {
+  /*  background-color: red; */
+  &.tv-badge-red {
+    &.bg-primary {
+      position: static;
+      background-color: rgb(var(--red-badge)) !important;
+      padding: clamp(3px, 0.5vw, 6px) clamp(5px, 0.8vw, 10px);
+    }
+  }
+  &.tv-badge-yellow {
+    &.bg-primary {
+      background-color: rgb(var(--yellow-badge)) !important;
+      padding: clamp(3px, 0.5vw, 6px) clamp(5px, 0.8vw, 10px);
+      color: var(--black);
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: clamp(7px, 1vw + 3px, 15px);
+    line-height: clamp(7px, 1vw + 6px, 16px);
+  }
+}

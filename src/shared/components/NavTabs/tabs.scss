@@ -1,0 +1,206 @@
+@import "../../../assets/css/mixins";
+
+#tv-tabs {
+  /* @include xLarge(max-width) {
+    margin-bottom: 300px;
+  } */
+  // border: none !important;
+  background-color: var(--tabs-bar-bg-color);
+  padding-bottom: clamp(0.5rem, 0.0588rem + 0.7843vw, 1rem);
+  padding-top: clamp(0.5rem, 0.0588rem + 0.7843vw, 1rem);
+  width: 100%;
+  flex-wrap: nowrap !important;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+  .nav-item {
+    margin-right: clamp(13px, 2.5vw - 10px, 40px);
+    p {
+      color: var(--black);
+    }
+    &:hover {
+      cursor: pointer;
+      /*   box-shadow: 0px 10px 22px -10px rgba(0, 0, 0, 0.75); */
+    }
+    .nav-link {
+      @include fontStyle(
+        $size: 16px,
+        $lineHeight: 24px,
+        $color: var(--black),
+        $weight: 400
+      );
+      padding: 8px 12px;
+      border: none;
+      outline: none;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        color: white;
+        pointer-events: none;
+      }
+    }
+  }
+  .active {
+    background-color: var(--overview-tab-active);
+    color: var(--white);
+    border-radius: 4px;
+    svg,
+    path {
+      fill: var(--color-dark-green);
+    }
+    p {
+      color: var(--white);
+    }
+  }
+
+  #tv-tabs-transparent {
+    background: transparent !important;
+    padding-left: unset !important;
+    .nav-item {
+      margin-right: 12px !important;
+      box-shadow: 0px 0px 0px #006ae6;
+      border: 1px solid var(--common);
+      border-radius: 6px;
+
+      .nav-link {
+        background-color: var(--color-dark-green);
+        padding: 10px 14px;
+        border-radius: 4px;
+      }
+    }
+  }
+  &.tv-tabs-dashboard {
+    @include xLarge(min-width) {
+      padding-left: 162px !important;
+    }
+    border-bottom: none;
+  }
+  &.tv-tabs-rounded {
+    // background-color: white;
+    // padding-left: unset !important;
+    // border-bottom: 1px solid var(--border-color);
+    &#tv-tabs {
+      .nav-item {
+        margin-right: 12px;
+
+        &:first-child {
+          @media only screen and (max-width: 1712px) {
+            // padding-left: 16px;
+          }
+        }
+
+        box-shadow: 0px 0px 0px #006ae6;
+        &.in-active {
+          opacity: 0.5;
+        }
+        .nav-link {
+          background-color: var(--light-gray);
+          color: var(--tabs-text-color);
+          border-radius: 40px;
+          border: 1px solid var(--border-color);
+          padding: 18px 24px;
+          height: 54px;
+          span {
+            all: unset;
+          }
+          svg {
+            margin-right: 9px;
+            path {
+              fill: var(--regular-gray-text-color);
+            }
+          }
+          &.active {
+            box-shadow: none;
+            background-color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            color: var(--black);
+            svg {
+              path {
+                fill: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.config-btn {
+  margin-left: auto;
+  margin-right: 12px !important;
+}
+
+//for responsiveness, should be deleted to be aligned with design team
+@media screen and (max-width: 1570px) {
+  .mygrid1 {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 30px;
+  }
+
+  .mygrid2 {
+    flex-direction: column;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content !important;
+    padding-left: 0px !important;
+    padding-top: 63px;
+    .nav-item {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+
+      button {
+        display: inline;
+      }
+    }
+  }
+}
+
+#tv-tabs-md {
+  background-color: var(--tabs-bar-bg-color);
+  border-bottom: 1px solid var(--border-color);
+  @include xLarge(max-width) {
+    border-bottom: 1px solid rgba(var(--dark-gray-badge), 0.25);
+    #tv-tabs {
+      overflow-x: scroll;
+      // padding-left: 16px;
+      // padding-right: 16px;
+      &::-webkit-scrollbar {
+        width: 400px;
+        height: 4px;
+      }
+      .nav-item {
+        .nav-link {
+          @include fontStyle(
+            $size: 14px,
+            $lineHeight: 12px,
+            $color: var(--label-color)
+          );
+        }
+      }
+
+      .active {
+        background: var(--dashboard-mobile-tab-active);
+        box-shadow: 0px 1px 0px #000000;
+        color: black !important;
+        border-radius: 0px;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.my-wrapper {
+  background-color: white;
+  padding-bottom: 5px;
+}
+
+.is-Rounded {
+  background-color: var(--body-bg-gray);
+}

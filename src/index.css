@@ -1,0 +1,6 @@
+@import "./assets/fonts/stylesheet.css";
+html,
+body {
+  font-family: var(--Roboto_Regular);
+  font-size: 16px;
+}

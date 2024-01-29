@@ -1,0 +1,102 @@
+@import "../../../assets/css/mixins";
+
+.product-image {
+  background-color: var(--item-card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  @include medium(max-width) {
+    background-color: var(--item-card-bg);
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+  @include small(max-width) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .item-purchase {
+    &__disabled {
+      opacity: 0.5;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      img {
+        &:first-child {
+          height: clamp(20px, 2.4vw + 3px, 34px);
+        }
+        &:last-child {
+          // width: 28px;
+        }
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        height: clamp(1.25rem, 1.0225rem + 0.9709vw, 2.1875rem);
+        width: auto;
+      }
+      .image-preview-icon {
+        cursor: pointer;
+      }
+    }
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: clamp(270px, 36vw + 10px, 590px);
+      margin: 0 auto;
+      img {
+        max-width: 100%;
+      }
+    }
+    &-left {
+      svg {
+        max-width: clamp(50px, 4vw + 50px, 130px);
+        // margin-left: 20px;
+        // margin-right: 20px;
+      }
+      &-separator {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+    &-right {
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+      P {
+        color: var(--black);
+      }
+      &-3da-logo {
+        height: 34px !important;
+        width: 52px;
+      }
+    }
+  }
+}
+.item-purchase-right {
+  #pill {
+    color: var(--product-img-gen) !important;
+  }
+}
+html {
+  &[theme-mode="dark"] {
+    .product-image {
+      .item-purchase__header {
+        img {
+          filter: invert(1) saturate(0);
+        }
+      }
+    }
+  }
+}

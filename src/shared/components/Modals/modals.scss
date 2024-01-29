@@ -1,0 +1,33 @@
+.tv-alert-modal-wrapper {
+  &.tv-modal-lg {
+    .modal-dialog {
+      max-width: 790px;
+    }
+  }
+  .modal-dialog {
+    max-width: 584px;
+  }
+  .modal-header {
+    padding: 0;
+    button {
+      &:hover {
+        background-color: var(--light-gray);
+      }
+    }
+  }
+  .tv-modal-body-content {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+}
+.modal-content {
+  border-radius: 20px !important;
+  padding: clamp(14px, 1vw + 5px, 30px);
+  border: none !important;
+  background-color: var(--item-card-bg) !important;
+}

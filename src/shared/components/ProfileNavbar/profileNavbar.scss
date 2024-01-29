@@ -1,0 +1,170 @@
+@import "../../../assets/css/_mixins.scss";
+.header {
+  &__info {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    /*   @include medium(min-width) {
+      transform: translateY(45px);
+    }
+ */
+    @include xLarge(max-width) {
+      margin-top: 85px;
+      position: absolute;
+      width: 100%;
+    }
+    @include medium(min-width) {
+      justify-content: space-between;
+    }
+    align-items: end;
+    &-box {
+      @include medium(min-width) {
+        /*  margin-left: 23px; */
+      }
+    }
+    &-imgBox {
+      @include medium(min-width) {
+        //transform: translateX(42px);
+      }
+    }
+    p {
+      /*  @include font-styles-body(var(--color-rarity-grey)); */
+      // margin-bottom: 12px;
+      span {
+        color: yellow; //todo: change this
+      }
+    }
+  }
+  &__name {
+    // padding-top: 40px;
+    @include fontStyle(
+      $family: var(--Roboto_Medium),
+      $size: clamp(16px, 2vw + 3px, 24px),
+      $lineHeight: clamp(16px, 2vw + 3px, 28px),
+      $color: var(--black)
+    );
+    margin-bottom: 7px;
+  }
+
+  &__prestige {
+    @include medium(max-width) {
+      margin-bottom: 30px;
+    }
+
+    &-uncommon {
+      color: var(--uncommon) !important;
+    }
+
+    @include fontStyle(
+      $size: clamp(14px, 1.6vw + 4px, 18px),
+      $lineHeight: 22px,
+      $color: var(--regular-gray-text-color)
+    );
+  }
+
+  &__assets {
+    &-box {
+      padding: 5px 30px;
+      height: 100%;
+      position: relative;
+      &:first-child {
+        // Code comented untill Ammount is not showing in dashboard top-right
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 75px;
+          background-color: rgba(#95a2b4, 0.4);
+          position: absolute;
+          top: 10px;
+          right: 0;
+          @include medium(max-width) {
+            top: -18px;
+          }
+          @include medium(min-width) {
+            //When desktop will be working this media query will removed
+            display: none;
+          }
+        }
+      }
+    }
+    &-growth {
+      @include fontStyle(
+        $size: clamp(12px, 1.4vw - 3px, 14px),
+        $lineHeight: clamp(14px, 1.8vw, 19px),
+        $color: var(--regular-gray-text-color)
+      );
+      strong {
+        color: var(--black);
+        margin-right: 2px;
+      }
+      svg {
+        margin-right: 4px;
+      }
+      white-space: nowrap;
+    }
+    &-title {
+      margin-bottom: 7px;
+      span {
+        @include fontStyle(
+          $size: 16px,
+          $lineHeight: 24px,
+          $color: var(--regular-gray-text-color),
+          $weight: 400
+        );
+      }
+      white-space: nowrap;
+    }
+
+    &-amount {
+      white-space: nowrap;
+      @include fontStyle(
+        $family: var(--Roboto_Medium),
+        $color: var(--black),
+        $weight: 500,
+        $size: clamp(14px, 1.6vw + 2px, 20px),
+        $lineHeight: clamp(14px, 1.5vw + 3px, 28px)
+      );
+    }
+  }
+}
+.auth-profile-img {
+  min-width: 90px;
+  max-width: 150px;
+  @include medium(min-width) {
+    // transform: translate(-9px, 47px);
+  }
+  img {
+    @include medium(min-width) {
+      margin-bottom: -55px;
+    }
+    width: 100%;
+    max-height: 180px;
+  }
+}
+
+/* responsoveness */
+#header__wideScreen {
+  display: none;
+  @include medium(min-width) {
+    display: block;
+  }
+}
+#header__smallScreen {
+  display: block;
+  @include medium(min-width) {
+    display: none;
+  }
+  .header {
+    &__assets {
+      &-box {
+        padding: 5px 20px;
+        &:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

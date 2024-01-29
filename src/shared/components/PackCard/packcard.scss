@@ -1,0 +1,49 @@
+@import "../../../assets/css/mixins";
+.packcard {
+  padding: clamp(12px, 2vw + 2px, 36px);
+  border-radius: 10px;
+  position: relative;
+  text-decoration: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .pack-sold,
+  .pack-left {
+    padding: 4px 8px;
+    border-radius: 4px;
+    @include fontStyle($size: "15px", $lineHeight: "16px");
+    text-transform: uppercase;
+  }
+  .pack-left {
+    color: var(--black);
+    background-color: var(--yellow);
+  }
+  .pack-sold {
+    color: var(--white);
+    background-color: var(--error);
+  }
+
+  &__name {
+    line-height: clamp(11px, 1vw + 6px, 22px);
+    font-size: clamp(8px, 2vw + 2px, 20px);
+  }
+
+  &__img {
+    display: grid;
+    place-items: center;
+  }
+
+  &__info {
+    margin-top: clamp(5px, 2vw - 5px, 23px);
+    &-box {
+      @include fontStyle(
+        $lineHeight: 24px,
+        $color: var(--regular-gray-text-color)
+      );
+      font-size: clamp(7px, 1vw + 3px, 16px);
+      line-height: clamp(10px, 1vw + 6px, 24px);
+    }
+  }
+}

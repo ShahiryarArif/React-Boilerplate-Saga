@@ -1,0 +1,82 @@
+@import "../../../assets/css/mixins";
+
+.uner-maintenance-wrapper {
+    background-image: url("../../../assets/images/blue-stars-bg.svg") ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+    height: calc(100vh - 74px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    @include large(max-width){
+        height: calc(100vh - 67px);
+    }
+    .img-wrap {
+        position: relative;
+        overflow: visible;
+        z-index: 1;
+        @include large(max-width) {
+            margin-bottom: 40px;
+        }
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url("../../../assets/images/maintenance-line.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 75%;
+            z-index: -1;
+        }
+    }
+    img {
+        max-width: 360px;
+        max-height: 360px;
+        width: 100%;
+    }
+    .text-wrapper {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: start;
+        position: relative;
+        @include large(max-width) {
+            align-items: center;
+            text-align: center;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: -54px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 100%;
+            background-color: var(--border-color);
+            border-radius: 6px;
+            @include large(max-width) {
+                display: none;
+            }
+        }
+        h3 {
+            font-size: clamp(38px, 3vw, 48px);
+            color: var(--white);
+        }
+        p {
+            max-width: 650px;
+            font-size: clamp(18px, 3vw, 24px);
+            color: var(--white);
+            line-height: 36px;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import "../../../assets/css/mixins";
+
+.sm-search-wrapper {
+  flex: 1;
+  .ais-SearchBox {
+    width: 100%;
+  }
+  .ais-SearchBox-form {
+    input {
+      padding: 12px 28px 12px 30px;
+      // flex: 1;
+      outline: none;
+      background-color: var(--sidebar-search);
+      color: var(--sidebar-search-text);
+      &:focus,
+      &:hover {
+        border: 1px solid var(--dark-primary-color);
+      }
+    }
+  }
+
+  .ais-Hits-item {
+    padding: 0;
+  }
+  .mob-search-list {
+    z-index: 1;
+    overflow-y: scroll;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    background-color: var(--body-bg-gray);
+    width: 100%;
+    height: 100%;
+    .ais-Hits {
+      .ais-Results-list {
+        margin-top: 0 !important;
+      }
+    }
+    .search-link {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: none;
+      border-bottom: 1px solid var(--border-color);
+      h5 {
+        font-family: var(--Roboto_Regular);
+        font-weight: 400;
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+      padding: 16px;
+      svg {
+        transform: rotate(210deg);
+      }
+    }
+  }
+}
+.ais-Hits-item,
+.ais-InfiniteHits-item,
+.ais-InfiniteResults-item,
+.ais-Results-item {
+  width: calc(100% - 1rem);
+  margin-top: 0;
+  border: none;
+}
+.ais-Hits-list,
+.ais-InfiniteHits-list,
+.ais-InfiniteResults-list,
+.ais-Results-list {
+  margin-top: 0;
+}

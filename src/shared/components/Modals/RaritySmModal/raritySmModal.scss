@@ -1,0 +1,34 @@
+@import "../../../../assets/css/mixins";
+
+.rarity-modal-wrapper-sm {
+    .rarity {
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        background-color: var(--common);
+        &.special {
+          background-color: var(--special);
+        }
+        &.common {
+          background-color: var(--common);
+        }
+        &.rare {
+          background-color: var(--rare);
+        }
+        &.uncommon {
+          background-color: var(--uncommon);
+        }
+        &.legendary {
+          background-color: var(--legendary);
+        }
+        &.mythical {
+          background-color: var(--mythical);
+        }
+        &.golden {
+          background-color: var(--golden);
+        }
+        &.platinum {
+          background-color: var(--platinum);
+        }
+      } 
+}

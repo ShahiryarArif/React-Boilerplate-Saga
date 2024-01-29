@@ -1,0 +1,54 @@
+@import "../../../../assets/css/mixins";
+.success_modal {
+  .modal-dialog {
+    max-width: 540px;
+  }
+  &-extended {
+    .modal-dialog {
+      max-width: 1000px;
+    }
+  }
+  &-custom {
+    .modal-dialog {
+      max-width: 540px;
+    }
+  }
+
+  .modal-content {
+    background-color: var(--white);
+
+    padding: clamp(25px, 3vw + 5px, 60px);
+    border-radius: 20px;
+    .modal-header {
+      padding: 0;
+      border-bottom: none;
+    }
+    .modal-body {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  &-icon {
+    margin-bottom: 35px;
+  }
+
+  &-heading {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  &-content {
+    margin-bottom: 30px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  &-buttons {
+    button {
+      &:not(:last-of-type) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

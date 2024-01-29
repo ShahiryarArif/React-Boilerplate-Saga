@@ -1,0 +1,55 @@
+@import "../../../../assets/css/mixins";
+#bar-footer {
+  border-radius: 6px;
+  width: 100%;
+
+  .progress {
+    // height: 8px;
+    border-radius: 20px;
+    margin-top: clamp(4px, 1vw, 17px);
+
+    .progress-bar {
+      background-color: var(--dark-primary-color);
+      border-radius: 25px;
+    }
+  }
+
+  .bar-footer__heading {
+    margin-bottom: clamp(7px, 1vw, 20px);
+
+    svg {
+      /*    height: clamp(12px, 0.9vw, 16px); */
+      height: clamp(12px, 0.9vw, 16px);
+
+      path {
+        fill: var(--collection-card-arrow);
+      }
+    }
+    span {
+      strong {
+        all: unset;
+        color: var(--black);
+        margin-right: 7px;
+      }
+      @include fontStyle(
+        $size: clamp(13px, 1.3vw + 3px, 20px),
+        $lineHeight: clamp(11px, 1.3vw + 3px, 20px),
+        $color: var(--regular-gray-text-color)
+      );
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    .white {
+      color: white;
+    }
+  }
+}
+html {
+  &[theme-mode="dark"] {
+    .progress {
+      filter: invert(1) saturate(0);
+    }
+  }
+}

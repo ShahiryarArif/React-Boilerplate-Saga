@@ -1,0 +1,149 @@
+@import "../../../../assets/css/mixins";
+
+.pack-reveal-modal-wrapper {
+    .modal-header {
+        border-bottom: none;
+        button {
+            margin-left: auto;
+            svg {
+                line {
+                    stroke: var(--white);
+                }
+            }
+        }
+    }
+    .modal-dialog {
+        max-width: 100vw;
+        margin: 0;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+        border-radius: 0 !important;
+        background-color: transparent;
+    }
+    .modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 120px);
+    }
+    .main-pack-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        width: 100%;
+        max-height: 640px;
+        // width: 100%;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: 100%;
+            animation: 1s CardShake infinite alternate;
+        }
+    }
+    .reveal-item-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .unrevealed {
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+            &:before{
+                content: "";
+                position: absolute;
+                border-radius: 20px;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(165, 239, 255, 0.5) 0%, rgba(60, 177, 255, 0.111979) 77.08%, rgba(70, 144, 213, 0) 100%);
+                opacity: 0;
+            }
+            &.one {
+                &::before{
+                    animation: onecard 6s infinite;
+                }
+            }
+            &.two {
+                &::before{
+                    animation: twocard 6s infinite;
+                }
+            }
+            &.three {
+                &::before{
+                    animation: threecard 6s infinite;
+                }
+            }
+            img {
+                height: 100%;
+            }
+        }
+    }
+    .itemcard {
+        opacity: 1;
+        box-shadow: 0px 0px 20px var(--neon-green);
+        animation: ItemReveal 1s;
+        animation-iteration-count: 1;
+        .itemcard__header {
+            margin-bottom:clamp(15px, 2vw + 2px, 20px) ;
+        }
+        
+    }
+}
+
+@keyframes CardShake {
+    25% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes ItemReveal {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+@keyframes onecard {
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes twocard {
+    25% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes threecard {
+    25% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

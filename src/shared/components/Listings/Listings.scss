@@ -1,0 +1,46 @@
+@import "../../../assets/css/mixins";
+.border-btm {
+  border-bottom: 1px solid var(--overview-border);
+}
+.listings {
+  padding-bottom: clamp(24px, 4vw, 40px);
+  &-box {
+    padding-top: clamp(24px, 4vw, 40px);
+  }
+}
+
+.listing-badge {
+  &-wrapper {
+    padding-top: 49px;
+    padding-bottom: 49px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  &-info {
+    @include fontStyle($size: 16px, $lineHeight: 28px, $color: var(--black));
+  }
+  @include fontStyle(
+    $size: 16px,
+    $lineHeight: 24px,
+    $color: var(--white),
+    $family: var(--Roboto_Bold)
+  );
+  display: inline;
+  padding: 6px 20px;
+  border-radius: 4px;
+
+  &.badge-mythical {
+    background-color: var(--mythical);
+  }
+
+  &.badge-special {
+    background-color: var(--special);
+  }
+
+  &.badge-black {
+    background-color: var(--black);
+  }
+  &.badge-blue {
+    background: rgba(0, 133, 255, 0.1);
+    color: var(--legendary);
+  }
+}

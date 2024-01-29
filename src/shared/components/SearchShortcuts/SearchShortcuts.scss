@@ -1,0 +1,31 @@
+@import "../../../assets/css/mixins";
+
+.search-shortcut {
+  &-title {
+    @include fontStyle($lineHeight: 20px, $color: var(--black), $size: 14px);
+  }
+  &-badge {
+    background-color: var(--border-color);
+    border-radius: 30px;
+    display: inline-block;
+    line-height: 27px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: var(--black);
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+    &.active {
+      background-color: var(--dark-primary-color);
+      color: var(--white);
+    }
+  }
+  &-suggestions {
+    /*    margin-right: 8px; */
+    :not(:last-child) {
+      /*   margin-right: 8px; */
+    }
+  }
+  border-bottom: 1px solid var(--border-color);
+}

@@ -1,0 +1,64 @@
+@import "../../../../assets/css/mixins";
+
+.item-send-offer-modal {
+    .modal-header {
+        border-bottom: none;
+        .tv-breadcrumb__arrow,
+        .breadcrumb-item {
+            line-height: 16px;
+        }
+        .breadcrumb-item {
+            &.active {
+                color: var(--regular-gray-text-color) !important;
+            }
+        }
+        button {
+            position: absolute;
+            right: 24px;
+            top: 24px;
+            font-size: 12px;
+        }
+    }
+    .tv-breadcrumb-large {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .image {
+            max-width: 210px;
+            max-height: 210px;
+        }
+        .title {
+            font-size: 36px;
+            line-height: 42px;
+        }
+        .price {
+            font-family: var(--Roboto_Medium);
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+            color: var(--black);
+        }
+        .item-detail {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            width: 100%;
+            li {
+                @include fontStyle($lineHeight: 24px);
+                margin-right: 8px;
+            }
+        }
+        > #tvNumberInput {
+            max-width: 560px;
+            width: 100%;
+        }
+        > button {
+            max-width: 560px;
+        }
+    }
+}

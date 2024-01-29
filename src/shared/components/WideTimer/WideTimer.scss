@@ -1,0 +1,25 @@
+@import "../../../assets/css/mixins";
+
+.wide-timer {
+  & > div:not(:last-child) {
+    margin-right: 24px;
+  }
+  &-item {
+    h3 {
+      @include fontStyle(
+        $size: 30px,
+        $lineHeight: 35px,
+        $color: var(--black),
+        $family: var(--Roboto_Bold)
+      );
+    }
+    span {
+      @include fontStyle(
+        $size: 12px,
+        $lineHeight: 14px,
+        $color: var(--black),
+        $family: var(--Roboto_Bold)
+      );
+    }
+  }
+}

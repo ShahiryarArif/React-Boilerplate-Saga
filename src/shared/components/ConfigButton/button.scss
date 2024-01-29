@@ -1,0 +1,21 @@
+@import "../../../assets/css/mixins";
+
+.tv-btn {
+  width: 116px; //todo: let padding decide the height + width
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-white {
+    background-color: white;
+    /*  @include font-styles-button(var(--color-dark-green)); */
+  }
+  &-grey {
+    background-color: var(--body-bg-gray);
+    /*  @include font-styles-button(var(--color-dark-green)); */
+  }
+}

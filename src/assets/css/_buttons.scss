@@ -1,0 +1,126 @@
+.primary-btn {
+  padding: 14px 24px;
+  background-color: var(--nav-active-text);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: flex;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  .text {
+    @include fontStyle(
+      $family: var(--Roboto_Medium),
+      $weight: 500,
+      $lineHeight: 20px,
+      $color: var(--white)
+    );
+  }
+  &.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:disabled {
+      background-color: var(--nav-item-text);
+
+      span {
+        color: var(--white);
+      }
+    }
+
+    span {
+      &.text {
+        margin-right: 8px;
+      }
+      &:before {
+        color: #fff;
+        // font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+  &.btn-ban {
+    background-color: rgba(var(--red-badge), 1);
+  }
+  &.btn-default {
+    background-color: var(--light-gray);
+  }
+  &.reset-btn {
+    padding: 6px 14px;
+    span {
+      color: rgba(var(--light-blue-badge), 1);
+      font-size: 14px;
+
+      &::before {
+        // font-size: 12px;
+        color: rgba(var(--light-blue-badge), 1);
+      }
+    }
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    span {
+      &.text {
+        margin-left: 8px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 2px solid #013f58;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .text {
+      color: var(--nav-active-text);
+    }
+  }
+  &:disabled,
+  &.disabled {
+    background-color: var(--border-color);
+    border: 1px solid #e1e5e8;
+
+    .text {
+      color: var(--nav-item-text);
+    }
+  }
+}
+
+.tv-secondary-btn {
+  padding: 14px 24px;
+  background-color: var(--light-gray);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-family: var(--Roboto_Bold);
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  .text {
+    @include fontStyle(
+      $family: var(--Roboto_Medium),
+      $weight: 500,
+      $lineHeight: 20px,
+      $color: var(--regular-gray-text-color)
+    );
+  }
+  &.block {
+    width: 100%;
+  }
+}
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../assets/css/mixins";
+
+.tv-chips {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  transition: all 0.2s;
+  /*   margin-bottom: clamp(0.5rem, 0.409rem + 0.3883vw, 0.875rem); */
+  margin-bottom: 12px;
+
+  &:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: 0px 4px 26px rgb(0 0 0 / 11%);
+  }
+
+  &-title {
+    @include fontStyle(
+      $size: clamp(12px, 1.5vw, 16px),
+      $lineHeight: 25px,
+      $family: var(--Roboto_Medium)
+    );
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 16px;
+    white-space: nowrap;
+  }
+}

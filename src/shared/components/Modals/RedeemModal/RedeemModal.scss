@@ -1,0 +1,53 @@
+@import "../../../../assets/css/mixins";
+
+.redeem-modal {
+  .modal-dialog {
+    max-width: 1086px;
+  }
+  .modal-content {
+    background-color: transparent;
+    position: relative;
+  }
+  &-card {
+    max-width: 405px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-title {
+    margin-bottom: clamp(20px, 3vw, 60px);
+    text-align: center;
+    @include fontStyle(
+      $size: clamp(1.125rem, 0.7913rem + 1.4239vw, 2.5rem),
+      $color: white,
+      $weight: bold,
+      $family: var(--Roboto_Bold),
+      $lineHeight: 1.3
+    );
+    &-golden {
+      text-align: center;
+      margin-top: clamp(20px, 3vw, 60px);
+      color: var(--golden) !important;
+      @include fontStyle(
+        $size: clamp(1.125rem, 0.7913rem + 1.4239vw, 2.5rem),
+        $color: var(--golden) !important,
+        $weight: 300,
+        $lineHeight: 1.3
+      );
+      strong {
+        @include fontStyle(
+          $size: clamp(1.375rem, 0.9806rem + 1.6828vw, 3rem),
+          $color: var(--golden) !important,
+          $weight: 900,
+          $family: var(--Roboto_Black),
+          $lineHeight: 1.3
+        );
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  opacity: 0.7 !important;
+}

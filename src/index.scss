@@ -1,0 +1,352 @@
+@import "./assets/css/variables";
+@import "./assets/css/mixins";
+@import "./assets/css/spacings";
+@import "./assets/css/buttons";
+@import "./assets/css/forms";
+
+// // reset css
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+//   text-decoration: none;
+// }
+
+// html,
+// body {
+//   background: var(--body-bg-gray);
+//   @include fontStyle;
+//   overflow-x: hidden;
+// }
+// *::-webkit-scrollbar {
+//   width: 6px;
+//   height: 6px;
+// }
+// *::-webkit-scrollbar-track {
+//   box-shadow: none;
+// }
+
+// *::-webkit-scrollbar-thumb {
+//   background-color: var(--scrollbar-color);
+//   outline: none;
+//   border-radius: 20px;
+// }
+// img {
+//   max-width: 100%;
+// }
+// h1 {
+//   @include fontStyle(
+//     $family: var(--Roboto_Bold),
+//     $size: 64px,
+//     $weight: 700,
+//     $lineHeight: 72px,
+//     $color: var(--black)
+//   );
+// }
+// h2 {
+//   @include fontStyle(
+//     $family: var(--Roboto_Bold),
+//     $size: clamp(1.5rem, 1.2269rem + 1.165vw, 2.625rem),
+//     $weight: 700,
+//     $lineHeight: 49px,
+//     $color: var(--black)
+//   );
+// }
+// h3 {
+//   @include fontStyle(
+//     $family: var(--Roboto_Bold),
+//     $size: 30px,
+//     $weight: 700,
+//     $lineHeight: 36px,
+//     $color: var(--black)
+//   );
+// }
+// h4 {
+//   @include fontStyle(
+//     $family: var(--Roboto_Bold),
+//     $size: 24px,
+//     $weight: 700,
+//     $lineHeight: 24px,
+//     $color: var(--black)
+//   );
+// }
+// h5 {
+//   @include fontStyle(
+//     $family: var(--Roboto_Bold),
+//     $size: clamp(0.875rem, 0.784rem + 0.3883vw, 1.25rem),
+//     $weight: bold,
+//     $color: var(--black)
+//   );
+// }
+// h6 {
+//   @include fontStyle($size: 14px, $color: var(--black), $lineHeight: 16px);
+//   margin: 0;
+// }
+// p {
+//   @include fontStyle($lineHeight: 24px);
+//   margin-bottom: 0;
+// }
+// label {
+//   @include fontStyle($size: 14px, $lineHeight: 24px);
+// }
+
+// a {
+//   text-decoration: none;
+//   font-style: normal;
+//   color: var(--regular-gray-text-color);
+//   &:hover {
+//     text-decoration: none;
+//   }
+// }
+// span {
+//   @include fontStyle(
+//     $size: 12px,
+//     $color: var(--regular-gray-text-color),
+//     $lineHeight: 14px
+//   );
+// }
+// strong {
+//   @include fontStyle(
+//     $size: 14px,
+//     $color: var(--dark-text-color),
+//     $lineHeight: 16px,
+//     $family: var(--Roboto_Bold)
+//   );
+// }
+// ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+// }
+// .reset-style {
+//   all: unset;
+//   &:hover,
+//   &:focus {
+//     all: unset;
+//   }
+// }
+// main {
+//   margin-top: 75px;
+//   @include large(max-width) {
+//     // padding-top: 7px;
+//     margin-top: 72px;
+//   }
+//   // min-height: calc(100vh - 72px - 85px);
+//   min-height: calc(100vh - 157px);
+// }
+// // containers
+// .tv-container-nav {
+//   max-width: 1720px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @media only screen and (max-width: 1712px) {
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
+// }
+// .tv-container {
+//   max-width: 1680px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @media only screen and (max-width: 1712px) {
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
+//   &.tv-all-pd-0 {
+//     @include xLarge(max-width) {
+//       padding-left: 0px !important;
+//       padding-right: 0px !important;
+//     }
+//   }
+// }
+
+// .tv-card-utility {
+//   box-shadow: 0px 0px 50px rgba(0, 31, 63, 0.04);
+//   border-radius: 8px;
+//   background: var(--item-card-bg);
+//   //background: var(--white);
+//   border: 1px solid var(--border-color);
+//   margin-bottom: 40px;
+// }
+
+// // icon tag
+// .tv-icon-tag {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 28px;
+//   width: 28px;
+//   background: var(--tv-btn-default);
+//   border-radius: 12px;
+
+//   &-primary {
+//     background: var(--dark-primary-color);
+//   }
+//   &-rounded {
+//     border-radius: 50%;
+//   }
+//   &-md {
+//     height: 48px;
+//     width: 48px;
+//   }
+//   &-lg {
+//     height: 56px;
+//     width: 56px;
+//   }
+//   &-xl {
+//     height: 68px;
+//     width: 68px;
+//   }
+// }
+// .full-loader {
+//   position: fixed;
+//   height: 100vh;
+//   width: 100vw;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 10000;
+//   left: 0;
+//   top: 0;
+// }
+// .small-loader {
+//   position: absolute;
+//   inset: 0;
+//   background-color: rgba(0, 0, 0, 0.3);
+//   z-index: 10000;
+// }
+
+// .loadmore-box {
+//   p {
+//     background-color: var(--loadmore);
+//     border-radius: 6px;
+//     border: 1px solid var(--border-color);
+//     width: max-content;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+// }
+// .dropdown-menu {
+//   padding-bottom: 16px;
+//   padding-top: 16px;
+//   border-radius: 12px;
+//   border: none;
+//   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.11);
+//   background-color: var(--filter-dd-menu-bg-color);
+//   /*   top: 75% !important; */
+//   .dropdown-item {
+//     padding: 12px 20px;
+//     color: var(--filter-dropdown-text-color);
+
+//     &:focus,
+//     &:hover {
+//       background-color: var(--navbar-dropdown-hover);
+//     }
+//   }
+// }
+
+// .rounded-badge {
+//   @include fontStyle($family: var(--Roboto_Bold), $size: 13px, $lineHeight: 2);
+//   height: 12px;
+//   width: 12px;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: absolute;
+//   border-radius: 50%;
+//   color: var(--white);
+//   top: 5px;
+//   right: 5px;
+//   z-index: 100;
+
+//   &.text-badge {
+//     top: 0;
+//     right: 0;
+//     height: 24px;
+//     width: 24px;
+//     transform: translate(50%, -50%);
+//   }
+
+//   &.orange {
+//     background: rgba(var(--orange-badge), 1);
+//   }
+//   &.green {
+//     background: rgba(var(--green-badge), 1);
+//   }
+//   &.common {
+//     background: var(--common);
+//   }
+//   &.uncommon {
+//     background: var(--uncommon);
+//   }
+//   &.rare {
+//     background: var(--rare);
+//   }
+//   &.special {
+//     background: var(--special);
+//   }
+//   &.legendary {
+//     background: var(--legendary);
+//   }
+//   &.mythical {
+//     background: var(--mythical);
+//   }
+//   &.golden {
+//     background: var(--golden);
+//   }
+//   &.platinum {
+//     background: var(--platinum);
+//   }
+// }
+
+// //tv user profile
+
+// .tv-card {
+//   &__header {
+//     padding-left: clamp(1.5rem, 1.2573rem + 1.0356vw, 2.5rem);
+//     padding-right: clamp(1.5rem, 1.2573rem + 1.0356vw, 2.5rem);
+//     padding-top: 24px;
+//     padding-bottom: 24px;
+//     border-bottom: 1px solid var(--border-color);
+//     h4 {
+//       margin-bottom: 0;
+//     }
+//     p {
+//       margin-top: 8px;
+//     }
+
+//     button {
+//       background: var(--light-gray);
+//     }
+//   }
+
+//   &__body {
+//     // padding: 40px;
+//     padding: clamp(1.5rem, 1.2573rem + 1.0356vw, 2.5rem);
+//   }
+
+//   &__footer {
+//     border-top: 1px solid var(--border-color);
+//     padding-top: 24px;
+//     padding-bottom: 24px;
+//     padding-left: clamp(1.5rem, 1.2573rem + 1.0356vw, 2.5rem);
+//     padding-right: clamp(1.5rem, 1.2573rem + 1.0356vw, 2.5rem);
+//   }
+// }
+
+// .overview-space {
+//   &-left {
+//     padding: 20px;
+//   }
+//   &-right {
+//     padding-top: 55px;
+//     padding-bottom: 55px;
+//     max-width: 880px;
+//   }
+// }
+// .modal-footer {
+//   border-color: var(--overview-border) !important;
+// }

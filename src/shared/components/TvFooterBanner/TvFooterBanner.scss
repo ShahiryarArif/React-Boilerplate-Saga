@@ -1,0 +1,29 @@
+@import "../../../assets/css/mixins";
+
+.tv-footer-banner {
+  position: fixed;
+  bottom: 0;
+  z-index: 200;
+  background-color: var(--dark-primary-color);
+  h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0px;
+    @include fontStyle($size: 18px, $lineHeight: 20px, $color: var(--white));
+  }
+  &-text {
+    width: 97%;
+    padding-right: 14px;
+  }
+  &-icon {
+    /*  width: 10%; */
+    padding-left: 12px;
+    position: relative;
+    border-left: 1px solid var(--label-color);
+    span {
+      position: absolute;
+      top: -6px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../assets/css/mixins";
+
+.success-msg {
+  position: fixed;
+  background-color: var(--white);
+  right: 0px;
+  border-radius: 4px;
+  border-left: 4px solid var(--rare);
+  box-shadow: 1px 6px 32px -19px rgba(0, 0, 0, 0.5);
+  transform: translateX(120%);
+  transition: all 0.2s;
+  transition-timing-function: ease-out;
+  z-index:100;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &-title {
+    @include fontStyle(
+      $size: 18px,
+      $lineHeight: 20px,
+      $color: var(--black),
+      $weight: 900
+    );
+  }
+  &-info {
+    line-height: 20px;
+  }
+}

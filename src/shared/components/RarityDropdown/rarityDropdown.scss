@@ -1,0 +1,129 @@
+@import "../../../assets/css/mixins";
+
+#rarityDropDown {
+  border: 1px solid var(--border-color);
+  background-color: var(--filter-dd-bg-color);
+  border-radius: 10px;
+
+  .btn {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  .dropdown {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: var(--filter-dd-bg-color);
+    border-radius: 10px;
+    // padding-top: clamp(0.5rem, 0.2321rem + 0.5357vw, 0.875rem);
+    // padding-bottom: clamp(0.5rem, 0.2321rem + 0.5357vw, 0.875rem);
+    // padding-left: clamp(0.75rem, 0.3929rem + 0.7143vw, 1.25rem);
+    // padding-right: clamp(0.75rem, 0.3929rem + 0.7143vw, 1.25rem);
+    &:hover {
+      cursor: pointer;
+    }
+    &-menu {
+      padding: 10px;
+      min-width: 0px;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      transform: translate(0px, 50px) !important;
+      width: 100%;
+      a {
+        padding: clamp(4px, 1vw, 15px) clamp(8px, 1vw + 2px, 22px);
+      }
+      /*  input:hover {
+        cursor: pointer;
+      } */
+    }
+    & > * {
+      border-radius: 10px;
+      border: 0px;
+      color: var(--label-color);
+      /*  @include fontStyle(
+        $size: clamp(8px, 1.5vw, 16px),
+        $color: var(--label-color)
+      ); */
+    }
+  }
+  .dropdown-white {
+    background-color: var(--filter-dd-bg-color);
+    height: 100%;
+
+    .text-black {
+      color: var(--filter-dd-text-color) !important;
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+  .rarity {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: var(--common);
+    &.special {
+      background-color: var(--special);
+    }
+    &.common {
+      background-color: var(--common);
+    }
+    &.rare {
+      background-color: var(--rare);
+    }
+    &.uncommon {
+      background-color: var(--uncommon);
+    }
+    &.legendary {
+      background-color: var(--legendary);
+    }
+    &.mythical {
+      background-color: var(--mythical);
+    }
+    &.golden {
+      background-color: var(--golden);
+    }
+    &.platinum {
+      background-color: var(--platinum);
+    }
+  }
+  .rarityDropDown-title {
+    line-height: 0.9;
+    span {
+      color: var(--black);
+      font-size: clamp(0.625rem, 0.534rem + 0.403vw, 1rem);
+      font-weight: normal;
+      font-style: normal;
+      line-height: 0.9;
+    }
+    b {
+      color: var(--black);
+      font-size: clamp(0.625rem, 0.534rem + 0.403vw, 1rem);
+    }
+  }
+  #custom-dropdown {
+    padding: 16px;
+    &.dropdown-menu {
+      background-color: var(--white);
+      min-width: none;
+    }
+    .custom-dropdown__content {
+      & > div:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      h6 {
+        @include fontStyle(
+          $size: 16px,
+          $lineHeight: 19px,
+          $weight: 900,
+          $color: var(--black)
+        );
+        margin-bottom: 27px;
+      }
+    }
+  }
+}

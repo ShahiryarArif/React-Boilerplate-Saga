@@ -1,0 +1,134 @@
+@import "../../../assets/css/mixins";
+
+.collection-card {
+  background-color: var(--item-card-bg);
+  border-radius: 6px;
+  padding: clamp(22px, 2vw, 40px);
+  position: relative;
+  height: 100%;
+  /*   transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.11);
+  } */
+  @include cardHover;
+  #tv-badge {
+    .badge {
+      background-color: var(--tv-timer-badge) !important;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    // margin-bottom: 6px;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      h4 {
+        font-size: clamp(14px, 2vw, 24px);
+        line-height: clamp(12px, 2vw + 2px, 32px);
+        margin-bottom: 0px;
+      }
+      img {
+        // height: clamp(24px, 2.8vw, 48px);
+        width: 20px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__title {
+    @include fontStyle(
+      $size: clamp(10px, 1.3vw, 16px),
+      $lineHeight: 24px,
+      $color: var(--regular-gray-text-color)
+    );
+    &-box {
+      margin-top: 5px;
+      @include medium(max-width) {
+        margin-top: 1px;
+      }
+      svg {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  &__completed {
+    img {
+      mix-blend-mode: luminosity;
+    }
+  }
+
+  &__media {
+    margin-top: 22px;
+    position: relative;
+    text-align: center;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      max-width: 100%;
+    }
+
+    &-in-progress {
+      > img {
+        mix-blend-mode: luminosity;
+        width: 100%;
+      }
+    }
+
+    &-small {
+      position: absolute;
+      bottom: 22px;
+      right: 16px;
+    }
+  }
+  &__footer {
+    margin-top: 22px;
+    &-start {
+      &:hover,
+      &:visited,
+      &:focus {
+        cursor: pointer;
+      }
+      display: flex;
+      align-items: center;
+      span {
+        @include fontStyle(
+          $size: clamp(13px, 1.3vw + 3px, 20px),
+          $lineHeight: clamp(11px, 1.3vw + 3px, 20px)
+        );
+      }
+      svg {
+        height: clamp(12px, 0.9vw, 16px);
+
+        path {
+          fill: var(--collection-card-arrow);
+        }
+      }
+    }
+  }
+  &__badges {
+    position: absolute;
+    top: 0;
+    right: clamp(22px, 2vw, 40px);
+    transform: translateY(-50%);
+    :not(:last-child) {
+      margin-right: clamp(8px, 1vw + 2px, 16px);
+    }
+  }
+  &__yellow-star {
+    transform: translateY(-7px);
+    img {
+      height: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
+    }
+  }
+}

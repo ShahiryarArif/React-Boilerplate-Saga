@@ -1,0 +1,35 @@
+@import "../../../assets/css/mixins";
+
+.notfound-page-wrapper {
+    background-image: url("../../../assets/images/blue-stars-bg.svg") ;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+    height: calc(100vh - 74px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    @include large(max-width){
+        height: calc(100vh - 67px);
+    }
+    h1{
+        color: var(--white);
+        font-family: var(--Roboto_Black);
+        font-size: clamp(36px, 4vw, 64px);
+        font-weight: 900;
+    }
+    h5 {
+        font-family: var(--Roboto_Regular);
+        font-weight: 400;
+        font-size: clamp(28px, 3vw, 45px);
+        color: var(--white);
+    }
+    p{
+        color: var(--white);
+        font-size: clamp(16px, 2vw, 28px);
+    }
+}

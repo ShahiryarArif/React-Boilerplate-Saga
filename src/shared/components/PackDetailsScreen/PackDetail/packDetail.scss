@@ -1,0 +1,42 @@
+@import "../../../../assets/css/mixins";
+
+.pack-detail-wrapper {
+  padding: clamp(24px, 2vw + 20px, 40px) clamp(16px, 2vw + 16px, 56px);
+  &-item {
+    span {
+      @include fontStyle(
+        $size: 16px,
+        $lineHeight: clamp(15px, 1.8vw, 24px),
+        $color: var(--regular-gray-text-color),
+        $weight: 400
+      );
+    }
+    strong {
+      @include fontStyle(
+        $size: 16px,
+        $lineHeight: clamp(15px, 1.8vw, 24px),
+        $weight: 600,
+        $color: var(--black)
+      );
+    }
+  }
+  h4 {
+    @include fontStyle(
+      $size: clamp(25px, 1.4vw, 30px),
+      $lineHeight: 36px,
+      $family: var(--Roboto_Bold),
+      $color: var(--black)
+    );
+    margin-bottom: 16px;
+  }
+  background-color: var(--item-card-bg);
+  border-radius: 20px;
+  &-detail {
+    @include fontStyle(
+      $size: 16px,
+      $lineHeight: 24px,
+      $color: var(--regular-gray-text-color),
+      $weight: 400
+    );
+  }
+}

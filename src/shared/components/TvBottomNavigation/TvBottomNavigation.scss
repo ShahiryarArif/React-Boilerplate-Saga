@@ -1,0 +1,46 @@
+@import "../../../assets/css/mixins";
+
+.btm-nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  &-list {
+    background-color: var(--bottom-nav-color);
+    height: 56px;
+    box-shadow: 0px -2px 30px rgba(0, 0, 0, 0.25);
+  }
+  &-item {
+    &:hover,
+    &:visited {
+      cursor: pointer;
+    }
+  }
+  &-link {
+    @include fontStyle(
+      $size: 9px,
+      $lineHeight: 12px,
+      $color: var(--label-color),
+      $weight: 400
+    );
+    &:hover {
+      color: var(--label-color);
+    }
+    &.active {
+      color: var(--black);
+    }
+  }
+}
+html {
+  &[theme-mode="dark"] {
+    .btm-nav-link {
+      &.active {
+        svg {
+          circle,
+          path {
+            stroke: #00ec93;
+          }
+        }
+      }
+    }
+  }
+}

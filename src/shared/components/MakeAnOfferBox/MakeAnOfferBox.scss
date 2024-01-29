@@ -1,0 +1,9 @@
+@import "../../../assets/css/mixins";
+
+.makeAnOfferBox {
+  background-color: var(--body-bg-gray);
+  padding: 28px 40px;
+  &-title {
+    @include fontStyle($size: 16px, $lineHeight: 28px);
+  }
+}

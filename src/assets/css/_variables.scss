@@ -1,0 +1,233 @@
+html {
+  --Roboto_Regular: "Roboto_Regular";
+  --Roboto_Medium: "Roboto_Medium";
+  --Roboto_Bold: "Roboto_Bold";
+  --Roboto_Black: "Roboto_Black";
+  --Roboto_BlackItalic: "Roboto_BlackItalic";
+  --Roboto_BoldItalic: "Roboto_BoldItalic";
+  --Roboto_Italic: "Roboto_Italic";
+  --Roboto_Light: "Roboto_Light";
+  --Roboto_LightItalic: "Roboto_LightItalic";
+  --Roboto_MediumItalic: "Roboto_MediumItalic";
+  --Roboto_Thin: "Roboto_Thin";
+  --Roboto_ThinItalic: "Roboto_ThinItalic";
+
+  // colors
+  --dashboard-tab-chip-color: #ffffff;
+  --packs-bg-cover: #001c29;
+  --input-border-color: #00ec9359;
+  --nav-items-text: #001c29;
+  --tabs-text-color: #566477;
+  --filter-dd-bg-color: #ffffff;
+  --filter-dd-text-color: #002737;
+  --tabs-bar-bg-color: #ffffff;
+  --header-bg-color: #ffffff;
+  --dark-primary-color: #002737;
+  --header-border-color: #e1e5e8;
+  --item-card-bg: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+  --body-bg-gray: #f7f7f9;
+  --neon-green: #00ec93;
+  --dark-text-color: #013f58;
+  --dark-text-color-2: #193d4b;
+  --filter-dd-menu-bg-color: #ffffff;
+  --scrollbar-color: #e1e5e8;
+  --filter-dropdown-text-color: #000000;
+  --checkbox-bg-color: #fbfbfd;
+  --navbar-dropdown-hover: #e9ecef;
+  --small-btn-bg: #ffffff;
+  --input-bg-color: #ffffff;
+  --input-text-color: #000000;
+  --primary-btn-bg: #002737;
+  --primary-btn-text: #ffffff;
+  --tv-btn-default: #f7f7f9;
+  --tv-btn-default-text: #002737;
+  --accounts-number-color: #013f58;
+  --accounts-patch-color: #ffffff;
+  --accounts-strong-text: #013f58;
+  --navbar-chevron: rgb(0, 39, 55);
+  --landing-page-section: #ffffff;
+  --landing-page-card-color-1: #fbfbfd;
+  --landing-page-card-color-2: #e1e5e8;
+  --svg-arrow-color: rgb(0, 39, 55);
+  --tv-footer-bg: #ffffff;
+  --footer-buttons: #002737;
+  --loadmore: #ffffff;
+  --collection-card-arrow: #000000;
+  --dashboard-tabs-bg: #002737;
+  --dashboard-search: #ffffff;
+  --tv-btn-outlined: #002737;
+  --trading-item-card-bg: #ffffff;
+  --sell-on-marketplace-tab: #f7f7f9;
+  --trading-tab-item: #ffffff;
+  --matchbox-btn: #002737;
+  --cart-strong: #013f58;
+  --cart-border: #e1e5e8;
+  --popular-tabs-rect: 0.1;
+  --slider-arrow-color: #ffffff;
+  --popular-on-tv-search-icon: #111111;
+  --sidebar-header-color: #ffffff;
+  --primary-white-btn: #ffffff;
+  --bottom-nav-color: #ffffff;
+  --sidebar-search: #ffffff;
+  --sidebar-search-text: #001c29;
+  --sidebar-back-icon: #002737;
+  --completed-collection: #001c29;
+  --collection-completed-color: #013f58;
+  --product-serial-numbers: #212529;
+  --product-img-gen: #000000;
+  --payment-card-opacity: 0.1;
+  --back-arrow-auth-modal: black;
+  --tv-download-card-color-1: #fbfbfd;
+  --tv-download-card-color-2: #e1e5e8;
+  --black-color: #000000;
+  --tv-footer-btns-border: transparent;
+  --tv-timer-badge: #002737;
+  --payment-method-accordion: #013f58;
+  --static-page-header-border: #e1e5e8;
+  --static-page-header-subtitle: #002737;
+  --static-page-header-title: #111111;
+  --static-page-header-desc: #566477;
+  --static-page-section-title: #111111;
+  --static-page-section-item: #002737;
+  --static-page-to-report-text: #000000;
+  --dark-to-light: #000000;
+  --inner-strong-text: #002737;
+  --trading-navbar-active: #013f58;
+  --overview-tab-active: #001c29;
+  --dashboard-mobile-tab-active: #ffffff;
+  --cover-heading: #002737;
+  --cover-subtitle: #013f58;
+  --overview-border: #e1e5e8;
+  --trading-search: #f7f7f9;
+  --cover-slider-dots: #000000;
+  --desktop-search-bar: #ffffff;
+
+  --regular-gray-text-color: #566477;
+  --border-color: #e1e5e8;
+  --nav-items-text-active: linear-gradient(90deg, #fb0131 0%, #8b1ec8 100%);
+  --linear-gradient: linear-gradient(90deg, #fb0131 0%, #8b1ec8 100%);
+  --metamask-linear-gradient: linear-gradient(90deg, #ed662c 0%, #fadb52 100%);
+
+  --card-border-color: #f7f7f9;
+  --light-gray: #f7f7f9;
+  --label-color: #95a2b4;
+
+  --metamask: 255, 138, 0;
+  --terra-wallet: 0, 133, 255;
+
+  --orange-badge: 255, 138, 0;
+  --green-badge: 31, 211, 103;
+  --dark-green-badge: 1, 63, 88;
+  --yellow-badge: 255, 182, 0;
+  --light-blue-badge: 0, 133, 255;
+  --red-badge: 237, 57, 46;
+  --dark-gray-badge: 86, 100, 119;
+  --purple-badge: 106, 86, 229;
+  --pink-badge: 255, 112, 215;
+
+  --yellow: #f4ac3d;
+  --error: #ee4638;
+
+  // rarity
+  --common: #e1e5e8; //rgb(225, 229, 232)
+  --uncommon: #af52de; //rgb(175, 82, 222)
+  --rare: #00ec93; //rgb(0, 236, 147)
+  --special: #ed392e; //rgb(237, 57, 46)
+  --legendary: #0085ff; //rgb(0, 133, 255)
+  --mythical: #6a56e5; //rgb(106, 86, 229)
+  --golden: #ffb600; //rgb(255, 182, 0)
+  --platinum: #f6fd54; //rgb(246, 253, 84)
+
+  &[theme-mode="dark"] {
+    --dark-text-color: #f7f7f9;
+    --product-img-gen: #95a2b4;
+    --product-serial-numbers: #95a2b4;
+    --cart-border: #001c29;
+    --body-bg-gray: #001c29;
+    --header-bg-color: #001c29;
+    --tabs-bar-bg-color: #001c29;
+    --border-color: #002737;
+    --header-border-color: #111111;
+    --light-gray: #002737;
+    --filter-dd-bg-color: #002737;
+    --filter-dd-text-color: #ffffff;
+    --filter-dd-menu-bg-color: #002737;
+    --item-card-bg: #002737;
+    --tabs-text-color: #95a2b4;
+    --nav-items-text-active: #00ec93;
+    --nav-items-text: #ffffff;
+    --black: #ffffff;
+    --regular-gray-text-color: #95a2b4;
+    --scrollbar-color: #e1e5e8;
+    --filter-dropdown-text-color: #95a2b4;
+    --checkbox-bg-color: transparent;
+    --navbar-dropdown-hover: #001c29;
+    --small-btn-bg: #002737;
+    --input-border-color: #00ec9359;
+    --input-bg-color: #001c29;
+    --input-text-color: #ffffff;
+    --primary-btn-bg: #ffffff;
+    --primary-btn-text: #001c29;
+    --tv-btn-default: #001c29;
+    --tv-btn-default-text: #f7f7f9;
+    --accounts-number-color: #95a2b4;
+    --accounts-patch-color: #002737;
+    --accounts-strong-text: #f7f7f9;
+    --navbar-chevron: #f7f7f9;
+    --landing-page-section: #001c29;
+    --landing-page-card-color-1: #002737;
+    --landing-page-card-color-2: #002737;
+    --svg-arrow-color: #ffffff;
+    --tv-footer-bg: #002737;
+    --tv-footer-btns-border: white;
+    --footer-buttons: #002737;
+    --loadmore: #002737;
+    --collection-card-arrow: #95a2b4;
+    --dashboard-tab-chip-color: #002737;
+    --dashboard-tabs-bg: #002737;
+    --dashboard-search: #001c29;
+    --tv-btn-outlined: #95a2b4;
+    --trading-item-card-bg: #001c29;
+    --sell-on-marketplace-tab: #001c29;
+    --trading-tab-item: #002737;
+    --matchbox-btn: #002737;
+    --cart-strong: #f7f7f9;
+    --popular-tabs-rect: 0.5;
+    --slider-arrow-color: #001c29;
+    --popular-on-tv-search-icon: #ffffff;
+    --sidebar-header-color: #001c29;
+    --primary-white-btn: #002737;
+    --bottom-nav-color: #002737;
+    --sidebar-search: #001c29;
+    --sidebar-search-text: #ffffff;
+    --sidebar-back-icon: #ffffff;
+    --completed-collection: #001c29;
+    --collection-completed-color: #95a2b4;
+    --payment-card-opacity: 0.5;
+    --back-arrow-auth-modal: #95a2b4;
+    --tv-download-card-color-1: #002737;
+    --tv-download-card-color-2: #002737;
+    --tv-timer-badge: #00ec93;
+    --payment-method-accordion: #013f58;
+    --static-page-header-border: #e1e5e8;
+    --static-page-header-subtitle: #e1e5e8;
+    --static-page-header-title: #ffffff;
+    --static-page-section-title: #ffffff;
+    --static-page-section-item: #95a2b4;
+    --static-page-to-report-text: #ffffff;
+    --dark-to-light: #95a2b4;
+    --inner-strong-text: #ffffff;
+    --trading-navbar-active: #00ec93;
+    --overview-tab-active: #00ec93;
+    --dashboard-mobile-tab-active: #00ec93;
+    --cover-heading: #ffffff;
+    --cover-subtitle: #e1e5e8;
+    --overview-border: #001c29;
+    --trading-search: #001c29;
+    --cover-slider-dots: #f7f7f9;
+    --desktop-search-bar: #001c29;
+  }
+
+}

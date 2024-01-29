@@ -1,0 +1,74 @@
+@import "../../../assets/css/mixins";
+.select-avatar-wrapper {
+    background-image: url("../../../assets/images/blue-stars-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+    height: calc(100vh - 74px);
+    width: 100vw;
+    display: grid;
+    @include large(max-width) {
+        height: calc(100vh - 67px);
+    }
+    // .react-3d-carousel{
+    //     align-self: center;
+    // justify-self: center;
+    // }
+    .slider-right,
+    .slider-left {
+        top: 25%;
+        // transform: translateX(-50%) !important;
+        > div {
+            border-color: var(--neon-green) !important;
+            color: var(--neon-green) !important;
+            // padding: clamp(16px, 3vw, 24px) clamp(16px, 3vw, 24px) !important;
+            width: clamp(45px, 8vw, 100px);
+            height: clamp(45px, 8vw, 100px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;      
+            i {
+                font-size: clamp(16px, 3vw, 28px);
+            }
+        }
+    }
+    // .slider-right {
+    //     > div {
+    //         border-left: none!important;
+    //     }
+    // }
+    // .slider-left {
+    //     > div {
+    //         border-right: none!important;
+    //     }
+    // }
+    .slider-single-content {
+        transition: 500ms all !important;
+        box-shadow: none !important;
+    }
+    .slider-single {
+        &.preactive {
+            .slider-single-content {
+                @include large (max-width){
+                    transform: translateX(-100%) scale(0.8)!important;
+                }
+            }
+        }
+        &.proactive {
+            .slider-single-content {
+                @include large(max-width) {
+                    transform: translateX(100%) scale(0.8)!important;
+                }
+            }
+        }
+        &.active {
+            .slider-single-content {
+                @include large (max-width) {
+                    transform: translateX(0) scale(1)!important;
+                }
+            }
+        }
+    }
+}

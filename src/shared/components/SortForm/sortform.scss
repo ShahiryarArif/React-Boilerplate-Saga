@@ -1,0 +1,25 @@
+.sortform {
+  display: inline-block;
+  &-block {
+    max-width: 100%;
+    display: block;
+  }
+  /* .dropdown-toggle {
+    background-color: var(--color-dark-green);
+    outline: none;
+    padding: 12px 50px;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 8px;
+    border: none;
+    color: var(--color-rarity-grey);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::placeholder {
+    color: var(--color-rarity-grey);
+  } */
+}

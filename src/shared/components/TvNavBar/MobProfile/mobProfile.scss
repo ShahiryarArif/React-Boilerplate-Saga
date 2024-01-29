@@ -1,0 +1,60 @@
+@import "../../../../assets/css/mixins";
+
+.mobProfile {
+  background-color: var(--sidebar-header-color);
+  padding: 25px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  &-value {
+    margin-bottom: 0px;
+    @include fontStyle(
+      $lineHeight: 20px,
+      $size: 20px,
+      $color: var(--black),
+      $weight: 600
+    );
+  }
+  &-top {
+    &:first-child {
+      flex: 1 0 100%;
+      width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+
+  &-name {
+    @include fontStyle($lineHeight: 20px, $color: var(--black));
+  }
+  &-status {
+    @include fontStyle(
+      $lineHeight: 14px,
+      $size: 14px,
+      $color: var(--regular-gray-text-color)
+    );
+    letter-spacing: 0.03em;
+  }
+
+  &-icon {
+    &-text {
+      @include fontStyle(
+        $size: 12px,
+        $lineHeight: 20px,
+        $color: var(--black),
+        $weight: 400
+      );
+    }
+  }
+  &-btm > &-icon-box:not(:last-child) {
+    border-right: 1px solid rgba(var(--regular-text-color-rgb), 0.1);
+  }
+  &-left {
+    a {
+      width: 54px;
+      height: 54px;
+      background-color: var(--dark-primary-color);
+      border-radius: 50%;
+      padding: 3px;
+      border: 1px solid #95a2b4;
+    }
+  }
+}

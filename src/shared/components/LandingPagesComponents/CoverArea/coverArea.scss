@@ -1,0 +1,163 @@
+@import "../../../../assets/css/mixins";
+.tv-cover-area-wrapper {
+  position: relative;
+
+  .tv-ca-img {
+    &.tv-ca-img-background {
+      &::before {
+        background: linear-gradient(
+          90.08deg,
+          #061c27 0.06%,
+          rgba(6, 28, 39, 0.39) 50%
+        );
+        content: "";
+        position: absolute;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  img {
+    // height: clamp(196px, 35vw + 10px, 670px);
+    object-fit: cover;
+    object-position: right;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    @include ipad(min-width) {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &.tv-color-white {
+    @include ipad(min-width) {
+      .tv-ca-text {
+        h2,
+        strong,
+        p {
+          color: var(--white) !important;
+        }
+      }
+    }
+  }
+
+  &.tv-color-black {
+    @include ipad(min-width) {
+      .tv-ca-text {
+        h2,
+        strong,
+        p {
+          color: var(--black-color) !important;
+        }
+      }
+    }
+  }
+
+  .tv-ca-text {
+    padding-top: clamp(28px, 6.4vw, 150px);
+    padding-bottom: clamp(28px, 6.4vw, 150px);
+    // padding-left: clamp(28px, 5vw + 5px, 130px);
+
+    z-index: 1;
+    position: relative;
+    background: var(--landing-page-section);
+
+    @include ipad(min-width) {
+      background: transparent;
+    }
+
+    .tv-ca-text-content {
+      max-width: clamp(500px, 32vw + 69px, 690px);
+
+      @include ipad(max-width) {
+        & > a {
+          color: var(--black);
+          font-weight: bold;
+        }
+        a[type="button"] {
+          height: 40px !important;
+          width: 145px !important;
+        }
+        svg {
+          path {
+            fill: var(--black);
+          }
+        }
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      // margin-bottom: clamp(10px, 1vw + 5px, 32px);
+      color: var(--neon-green);
+    }
+    strong {
+      font-family: var(--Roboto_Medium);
+      font-size: clamp(10px, 1vw + 5px, 24px);
+      margin-bottom: clamp(10px, 1vw + 5px, 32px);
+      display: inline-block;
+      color: var(--cover-subtitle);
+
+      @include ipad(min-width) {
+        color: #013f58;
+      }
+    }
+    h2 {
+      font-size: clamp(16px, 3vw + 5px, 64px);
+      margin-bottom: clamp(10px, 1vw + 5px, 24px);
+      line-height: 1.3;
+      color: var(--cover-heading);
+
+      @include ipad(min-width) {
+        color: var(--black-color);
+      }
+    }
+    p {
+      font-size: clamp(12px, 1vw + 5px, 24px);
+      margin-bottom: clamp(1rem, 0.0291rem + 4.1424vw, 5rem);
+      line-height: 1.35;
+    }
+    #tv-btn {
+      height: 56px;
+    }
+  }
+  .tv-ca-backBtn {
+    @include ipad(min-width) {
+      transform: translateY(-40px);
+    }
+    &.black {
+      color: var(--black-color);
+      font-weight: bold;
+    }
+  }
+  .tv-ca-subtitle {
+    &.neon {
+      color: var(--neon-green);
+    }
+  }
+}
+// html {
+//   &[theme-mode="dark"] {
+//     .tv-ca-text {
+//       h2 {
+//         color: var(--white);
+//         @include ipad(min-width) {
+//           color: #000000;
+//         }
+//       }
+//       strong {
+//         color: #f7f7f9;
+//         @include ipad(min-width) {
+//           color: var(--dark-text-color);
+//         }
+//       }
+//     }
+//   }
+// }

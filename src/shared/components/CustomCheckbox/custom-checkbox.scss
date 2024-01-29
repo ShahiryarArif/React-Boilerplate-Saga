@@ -1,0 +1,84 @@
+@import "../../../assets/css/mixins";
+
+.custom-checkbox {
+  min-width: none;
+  min-height: none;
+  height: 24px;
+  width: 24px;
+
+  &__wrapper {
+    display: block;
+    position: relative;
+
+    & > * {
+      cursor: pointer;
+    }
+    //rarities
+    .checkbox-rarity-common {
+      margin-left: 8px;
+      background-color: var(--common);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-rare {
+      margin-left: 8px;
+      background-color: var(--rare);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-uncommon {
+      margin-left: 8px;
+      background-color: var(--uncommon);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-special {
+      margin-left: 8px;
+      background-color: var(--special);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-legendary {
+      margin-left: 8px;
+      background-color: var(--legendary);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-mythical {
+      margin-left: 8px;
+      background-color: var(--mythical);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-golden {
+      margin-left: 8px;
+      background-color: var(--golden);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+    .checkbox-rarity-platinum {
+      margin-left: 8px;
+      background-color: var(--platinum);
+      height: 6px;
+      width: 26px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+  }
+
+  &__label {
+    white-space: nowrap;
+    @include fontStyle(
+      /*  $size: clamp(12px, 1.5vw, 16px), */ $size: 16px,
+      $lineHeight: 18px,
+      $weight: 400,
+      $color: var(--filter-dropdown-text-color)
+    );
+  }
+}

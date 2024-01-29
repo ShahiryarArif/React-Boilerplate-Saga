@@ -1,0 +1,49 @@
+@import "../../../../assets/css/mixins";
+
+.pack-listing-detail-wrapper {
+  background-color: var(--item-card-bg);
+  border-radius: 20px;
+  padding: clamp(24px, 2vw + 24px, 40px) clamp(16px, 2vw + 16px, 40px);
+  .title-wrap {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .edition {
+    @include fontStyle(
+      $family: var(--Roboto_Medium),
+      $weight: 500,
+      $lineHeight: 24px
+    );
+    background-color: var(--body-bg-gray);
+    border-radius: 50px;
+    display: inline-block;
+  }
+  .title {
+    @include fontStyle(
+      $family: var(--Roboto_Bold),
+      $size: 42px,
+      $weight: 700,
+      $lineHeight: 49px,
+      $color: var(--black)
+    );
+  }
+  .date-text {
+    @include fontStyle($size: 20px, $lineHeight: 24px, $color: var(--black));
+    span {
+      font-family: var(--Roboto_Medium);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .pack-detail-listtxt {
+    li {
+      @include fontStyle($size: 20px, $lineHeight: 24px);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      min-width: 16px;
+    }
+  }
+}

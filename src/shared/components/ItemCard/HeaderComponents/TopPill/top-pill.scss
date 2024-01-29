@@ -1,0 +1,93 @@
+@import "../../../../../assets/css/mixins";
+#top-pill {
+  height: clamp(2px, 0.5vw, 6px);
+  width: clamp(27px, 4vw, 66px);
+  transition: all 0.2s ease-out;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: var(--common);
+  text-transform: capitalize;
+z-index: 1;
+  
+    &.special {
+      background-color: var(--special);
+    }
+    &.common {
+      background-color: var(--common);
+    }
+    &.rare {
+      background-color: var(--rare);
+    }
+    &.uncommon {
+      background-color: var(--uncommon);
+    }
+    &.legendary {
+      background-color: var(--legendary);
+    }
+    &.mythical {
+      background-color: var(--mythical);
+    }
+    &.golden {
+      background-color: var(--golden);
+    }
+    &.platinum {
+      background-color: var(--platinum);
+    }
+
+
+
+  &.top-pill-dark-blue {
+    background-color: var(--dark-primary-color);
+    p {
+      color: var(--white);
+    }
+  }
+  &.top-pill-yellow {
+    background-color: var(--yellow);
+    p {
+      color: var(--black) !important;
+    }
+  }
+
+  &.top-pill-green {
+    background-color: var(--color-neon-green);
+  }
+  &.top-pill-red {
+    background-color: rgba(var(--red-badge));
+  }
+  &.top-pill-grey {
+    background-color: var(--common);
+  }
+  &.top-pill-small {
+    padding: 3px 4px;
+  }
+
+  &.top-pill-wide {
+    height: fit-content;
+    width: fit-content;
+    padding: 4px clamp(17px, 1.8vw, 27px);
+    top: 10px;
+    color: var(--white);
+    p {
+      @include fontStyle(
+        $size: clamp(12px, 1.5vw - 2px, 18px),
+        $lineHeight: clamp(14px, 1.5vw, 18px),
+        $color: var(--black),
+        $weight: bold
+      );
+      width: 100%;
+    }
+  }
+
+  p {
+    width: 0;
+    font-size: 0;
+    font-weight: bold;
+    color: var(--black);
+  }
+}

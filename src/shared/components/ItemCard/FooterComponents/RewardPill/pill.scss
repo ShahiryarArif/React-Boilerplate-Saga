@@ -1,0 +1,56 @@
+@import "../../../../../assets/css/mixins";
+#pill {
+  padding: clamp(5px, 0.5vw, 9px) clamp(5px, 0.8vw, 12px);
+  width: fit-content;
+  height: fit-content;
+  @include fontStyle(
+    $size: clamp(7px, 1vw + 3px, 15px),
+    $lineHeight: clamp(4px, 1vw + 3px, 16px),
+    $weight: 700,
+    $color: var(--dark-primary-color)
+  );
+  border-radius: 26px;
+  background-color: var(--color-light-mode);
+  span {
+    color: currentColor;
+  }
+
+  svg {
+    margin-right: 4px;
+  }
+
+  &.pill-white {
+    background-color: var(--color-light-mode);
+  }
+
+  &.pill-yellow {
+    background-color: var(--yellow);
+  }
+
+  &.pill-gray {
+    background-color: var(--common);
+  }
+  &.pill-green {
+    background-color: var(--color-neon-green);
+  }
+  &.pill-transparent {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+  }
+
+  &.pill-small {
+    padding: 3px 6px;
+    color: var(--black);
+    font-size: 5px;
+    line-height: 1.1;
+    transform: translateY(5px);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin-right: 4px;
+    height: clamp(6px, 1vw + 3px, 16px);
+  }
+}

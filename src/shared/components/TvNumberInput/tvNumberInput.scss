@@ -1,0 +1,72 @@
+@import "../../../assets/css/mixins";
+
+#tvNumberInput {
+  margin-bottom: clamp(15px, 2vw - 3px, 32px);
+  .input-group {
+    & > * {
+      margin-left: 0px;
+    }
+  }
+  .input-group-text {
+    padding: 20px 15px;
+    background-color: var(--body-bg-gray);
+
+    border-color: var(--common);
+    border-style: solid;
+    border-width: 0px 3px 0px 0;
+    @include fontStyle(
+      $size: 16px,
+      $lineHeight: 14px,
+      $color: var(--black),
+      $weight: 700
+    );
+    &-right {
+      /*   height: 100%; */
+      a {
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tvNumberInput {
+    &-input {
+      border: none;
+      -moz-appearance: textfield;
+      padding: 34px 12px !important;
+      @include medium(max-width) {
+        padding: 34px 0px 34px 10px !important;
+      }
+      background-color: var(--body-bg-gray);
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      &::placeholder {
+        @include fontStyle(
+          $size: 16px,
+          $lineHeight: 18px,
+          $color: var(--black),
+          $weight: 400
+        );
+      }
+      &.form-control {
+        :focus {
+          outline: none;
+          box-shadow: 0;
+        }
+      }
+    }
+  }
+
+  .tvNumberInput-input-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+  .tvNumberInput-bid {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

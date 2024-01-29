@@ -1,0 +1,44 @@
+@import "../../../assets/css/mixins";
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(270px, 31vw, 400px), 1fr)
+  );
+  grid-auto-rows: max-content;
+  grid-gap: clamp(20px, 2vw + 2px, 40px);
+
+  &-wide {
+    display: grid;
+    /*  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); */
+    grid-template-columns: 1fr;
+    grid-column-gap: 60px;
+
+    @media screen and (min-width: 527px) {
+      grid-template-columns: 1fr 1fr;
+
+      :nth-child(2) {
+        grid-area: 2 / 1 / span 2 / span 2;
+      }
+    }
+
+    @media screen and (min-width: 1460px) {
+      grid-template-columns: 1fr 1.85fr 1fr;
+      :nth-child(2) {
+        grid-area: inherit;
+      }
+    }
+  }
+  &-md {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(150px, 40vw, 305px), 1fr)
+    );
+    grid-gap: clamp(16px, 3vw, 40px);
+  }
+
+  &-ex-wide {
+    grid-template-columns: repeat(auto-fit, minmax(820px, 1fr));
+  }
+}

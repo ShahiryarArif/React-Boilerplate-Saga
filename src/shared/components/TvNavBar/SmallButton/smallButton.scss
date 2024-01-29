@@ -1,0 +1,60 @@
+@import "../../../../assets/css/mixins";
+
+html {
+  &[theme-mode="dark"] {
+    .smallButton {
+      border-color: transparent;
+      svg {
+        path {
+          fill: #95a2b4;
+        }
+      }
+    }
+  }
+}
+
+.smallButton {
+  background-color: var(--small-btn-bg);
+  height: 34px;
+  width: 34px;
+  position: relative;
+  @include xxLarge(min-width) {
+    height: 42px;
+    width: 42px;
+  }
+
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--common);
+
+  &-icon {
+    position: absolute;
+    right: 11.22%;
+    top: 20.5%;
+    bottom: 60%;
+  }
+
+  &-round {
+    border-radius: 50%;
+  }
+  &-green {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+  }
+  &.bg-discord {
+    background: #8c9eff;
+    border: none;
+  }
+  &.bg-letter {
+    background: #039be5;
+    border: none;
+  }
+  &.bg-gray {
+    background-color: var(--light-gray);
+    height: 32px;
+    border: none;
+  }
+}
